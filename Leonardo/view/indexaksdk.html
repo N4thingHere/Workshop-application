@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-...S==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-DfYZjcWJwgzAM2b+9rDRns9g+uIzCks5ZSzzk9Q3aefW3SWd8MWu/VvXyd2cW52b" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-REPLACE-WITH-GENERATED-VALUE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Oficina</title>
+</head>
+
+<body>
+    <header id="header">
+        <ul class="informations">
+            <li class="buttons">HOME</li>
+            <li class="buttons">ABOUT US</li>
+            <li class="buttons">SERVICES</li>
+            <li class="buttons">APPOINTMENTS</li>
+            <li class="buttons">COUPONS</li>
+            <li class="buttons">FAQ</li>
+            <li class="buttons">CONTACT US</li>
+        </ul>
+        <ul class="checkout">
+            <li class="buttons" onclick="pageLogin()">LOGIN</li>
+            <li class="buttons">REGISTER</li>
+            <script src="../settingsPage.js"></script>
+        </ul>
+    </header>
+    <main id="main">
+        <div class="carousel">
+            <div class="slide">
+                <img src="../assets/page.jpg" alt="">
+                <h1>We'll have you up and running in no time</h1>
+                <div class="buttons-img">
+                    <button class="red-button">LEARN HOW</button>
+                    <span>OR</span>
+                    <button class="transparent-button">MAKE APPOINTMENT</button>
+                </div>
+            </div> <!-- final div slide -->
+            <div class="slide">
+                <img src="../assets/page2.jpg" alt="">
+                <h1>Servicing on all makes and models</h1>
+                <div class="buttons-img">
+                    <button class="red-button">LEARN HOW</button>
+                    <span>OR</span>
+                    <button class="transparent-button">MAKE APPOINTMENT</button>
+                </div>
+            </div> <!-- final div slide -->
+            <div class="slide">
+                <img src="../assets/page3.jpg" alt="">
+                <h1>Quality maintenance solutions</h1>
+                <div class="buttons-img">
+                    <button class="red-button">LEARN HOW</button>
+                    <span>OR</span>
+                    <button class="transparent-button">MAKE APPOINTMENT</button>
+                </div>
+            </div> <!-- final div slide -->
+        </div> <!-- final div carousel -->
+        <div class="controls">
+            <button id="prevBtn">&larr;</button>
+            <button id="nextBtn">&rarr;</button>
+        </div> <!-- final div controls -->
+        <section id="navbar-main">
+            <span class="icon"><i class="fas fa-location-arrow"></i></span>
+            <h3>GET DIRECTIONS TO OUR SERVICE</h3>
+            <div class="divider"></div>
+            <span class="icon"><i class="far fa-clock"></i></span>
+            <h3>LIMITED TIME OFFERS</h3>
+            <div class="divider"></div>
+            <span class="icon"><i class="far fa-calendar-alt"></i></span>
+            <h3>REQUEST AN APPOINTMENT</h3>
+            <div class="divider"></div>
+            <span class="icon"><i class="fas fa-wrench"></i></span>
+            <h3>LEARN MORE ABOUT US</h3>
+        </section>
+        <script src="./carrossel.js"></script>
+    </main>
+    <article id="article">
+        <div id="content">
+            <div class="block1 block">
+                <img src="../assets/images-maintenance/image1.jpg" alt="">
+                <div class="block-content">
+                    <h4>Preventive maintenance</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block2 block">
+                <img src="../assets/images-maintenance/image2.jpg" alt="">
+                <div class="block-content">
+                    <h4>Oil change</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block3 block">
+                <img src="../assets/images-maintenance/imagem3.jpg" alt="">
+                <div class="block-content">
+                    <h4>Steering & Suspension</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block4 block">
+                <img src="../assets/images-maintenance/imagem4.jpg" alt="">
+                <div class="block-content">
+                    <h4>Tires & Tire repair</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block5 block">
+                <img src="../assets/images-maintenance/image5.jpg" alt="">
+                <div class="block-content">
+                    <h4>Brakes & Brake repair</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block6 block">
+                <img src="../assets/images-maintenance/image6.jpg" alt="">
+                <div class="block-content">
+                    <h4>Climate control</h4>
+                    <span class="icon-block"><i class="fas fa-window-minimize"></i></span>
+                </div>
+            </div>
+            <div class="block7">
+                <button class="button-block7">ALL SERVICES</button>
+            </div>
+        </div>
+
+        <hr class="hr-article">
+        <div class="text-block">
+            <div class="titles">
+                <h2 class="h2-text-block">Our experts can help keep your car running at full power</h2>
+                <h4 class="h4-text-block">BETTER THAN EXPECTED</h4>
+                <h4 class="h4-text-block-2">WE BUILD RELATIONSHIPS</h4>
+            </div> <!-- final div titles -->
+            <span class="text-block-span"><i class="fas fa-window-minimize"></i></span>
+            <div class="subtitles">
+                <p class="h2-subtitle">Aenean semper nisi ut neque molestie posuere ac id tortor. Nam ut massa
+                    tincidunt,
+                    volutpat sapien sed, gravida velit. Proin ut vehicula massa. Aenean sit amet metus ante. Donec ut
+                    nisl
+                    augue pellentesque.</p>
+
+                <p class="h4-subtitle">Aenean semper nisi ut neque molestie posuere ac id tortor. Nam ut massa
+                    tincidunt,
+                    volutpat sapien sed, gravida velit.</p>
+
+
+                <p class="h4-subtitle-2">Aenean semper nisi ut neque molestie posuere ac id tortor. Nam ut massa
+                    tincidunt,
+                    volutpat sapien sed, gravida velit.</p>
+            </div> <!-- final div subtitles -->
+        </div> <!-- final div text-block -->
+        <div class="button-text-div">
+            <button class="text-block-button">LEARN MORE ABOUT US</button>
+        </div>
+    </article>
+    <article id="container-coupons">
+        <div class="titles-coupons">
+            <h1 class="coupons-h1">COUPONS & DEALS</h1>
+            <p class="coupons-subtitle">Get discounts on auto maintenance services, tire services, oil changes and more.
+                Just remember to bring your coupons in or access them on your mobile device.</p>
+        </div> <!-- final div titles-coupons -->
+        <div class="blocks-coupons">
+            <div class="block-coupons1">
+                <div class="block-coupons1-title">
+                    <h3>Great savings</h3>
+                </div> <!-- final div block-coupons1-title -->
+                <div class="block-coupons1-icon">
+                    <span class="icon-coupons1"><i class="fas fa-window-minimize"></i></span>
+                </div> <!-- final div block-coupons1-icon -->
+                <div class="offerts">
+                    <h1>15% OFF</h1>
+                </div> <!-- final div offerts -->
+                <div class="offerts-subtitle">
+                    <p>any service (excludes tax) with student ID</p>
+                </div> <!-- final div offerts-subtitle -->
+                <hr class="hr-offerts">
+                <div class="description-offerts">
+                    <p>Brakes, Exhaust, Fluids, Factory maintenance service, Suspension, Wheel alignments, Belts, Hoses,
+                        Headlamps, Bulbs & more</p>
+                </div> <!-- final div description-offerts -->
+                <hr class="hr-offerts">
+                <div class="button-offerts">
+                    <div class="block-button"></div>
+                    <button>PRINT THIS COUPON</button>
+                </div> <!-- final button-offerts -->
+                <hr class="hr-offerts-button">
+                <div class="expires">
+                    <p>EXPIRES 11/16/2015</p>
+                    <p>BD724NA</p>
+                </div> <!-- final div expires -->
+            </div> <!-- final div block-coupons1 -->
+            <div class="block-coupons2">
+                <div class="block-coupons1-title">
+                    <h3>Great savings</h3>
+                </div> <!-- final div block-coupons1-title -->
+                <div class="block-coupons1-icon">
+                    <span class="icon-coupons1"><i class="fas fa-window-minimize"></i></span>
+                </div> <!-- final div block-coupons1-icon -->
+                <div class="offerts">
+                    <h1>15% OFF</h1>
+                </div> <!-- final div offerts -->
+                <div class="offerts-subtitle">
+                    <p>any service (excludes tax) with student ID</p>
+                </div> <!-- final div offerts-subtitle -->
+                <hr class="hr-offerts">
+                <div class="description-offerts">
+                    <p>Brakes, Exhaust, Fluids, Factory maintenance service, Suspension, Wheel alignments, Belts, Hoses,
+                        Headlamps, Bulbs & more</p>
+                </div> <!-- final div description-offerts -->
+                <hr class="hr-offerts">
+                <div class="button-offerts">
+                    <div class="block-button"></div>
+                    <button>PRINT THIS COUPON</button>
+                </div> <!-- final button-offerts -->
+                <hr class="hr-offerts-button">
+                <div class="expires">
+                    <p>EXPIRES 11/16/2015</p>
+                    <p>BD724NA</p>
+                </div> <!-- final div expires -->
+            </div> <!-- final div block-coupons2 -->
+            <div class="block-coupons3">
+                <div class="block-coupons1-title">
+                    <h3>Great savings</h3>
+                </div> <!-- final div block-coupons1-title -->
+                <div class="block-coupons1-icon">
+                    <span class="icon-coupons1"><i class="fas fa-window-minimize"></i></span>
+                </div> <!-- final div block-coupons1-icon -->
+                <div class="offerts">
+                    <h1>15% OFF</h1>
+                </div> <!-- final div offerts -->
+                <div class="offerts-subtitle">
+                    <p>any service (excludes tax) with student ID</p>
+                </div> <!-- final div offerts-subtitle -->
+                <hr class="hr-offerts">
+                <div class="description-offerts">
+                    <p>Brakes, Exhaust, Fluids, Factory maintenance service, Suspension, Wheel alignments, Belts, Hoses,
+                        Headlamps, Bulbs & more</p>
+                </div> <!-- final div description-offerts -->
+                <hr class="hr-offerts">
+                <div class="button-offerts">
+                    <div class="block-button"></div>
+                    <button>PRINT THIS COUPON</button>
+                </div> <!-- final button-offerts -->
+                <hr class="hr-offerts-button">
+                <div class="expires">
+                    <p>EXPIRES 11/16/2015</p>
+                    <p>BD724NA</p>
+                </div> <!-- final div expires -->
+            </div> <!-- final div block-coupons3 -->
+        </div> <!-- final div-block-coupons -->
+        <div class="button-view-all">
+            <button>VIEW ALL COUPONS</button>
+        </div>
+    </article>
+
+    <article id="repair-type">
+        <div class="image-repair">
+            <div class="overlay">
+                <span class="icon-repair-content"><i class="fas fa-window-minimize"></i></span>
+                <h2>VEHICLES WE SERVICE AND REPAIR</h2>
+                <span class="icon-repair-content"><i class="fas fa-window-minimize"></i></span>
+            </div> <!-- final div overlay -->
+            <div class="ul-repair">
+                <ul class="li-block1">
+                    <li>Alabama Repair</li>
+                    <li>Alaska Repair</li>
+                    <li>Arizona Repair</li>
+                    <li>Arkansas Repair</li>
+                    <li>California Repair</li>
+                    <li>Colorado Repair</li>
+                    <li>Connecticut Repair</li>
+                </ul>
+                <ul class="li-block2">
+                    <li>Delaware Repair</li>
+                    <li>Florida Repair</li>
+                    <li>Georgia Repair</li>
+                    <li>Hawaii Repair</li>
+                    <li>Idaho Repair</li>
+                    <li>Illinois Repair</li>
+                    <li>Indiana Repair</li>
+                </ul>
+                <ul class="li-block3">
+                    <li>Iowa Repair</li>
+                    <li>Kansas Repair</li>
+                    <li>Kentucky Repair</li>
+                    <li>Louisiana Repair</li>
+                    <li>Maine Repair</li>
+                    <li>Maryland Repair</li>
+                    <li>Massachusetts Repair</li>
+                </ul>
+                <ul class="li-block4">
+                    <li>Michigan Repair</li>
+                    <li>Minnesota Repair</li>
+                    <li>Mississipi Repair</li>
+                    <li>Missouri Repair</li>
+                    <li>Montana Repair</li>
+                    <li>Nebraska Repair</li>
+                    <li>Nevada Repair</li>
+                </ul>
+                <ul class="li-block5">
+                    <li>New Hampshire Repair</li>
+                    <li>New Jersey Repair</li>
+                    <li>New Mexico Repair</li>
+                    <li>New York Repair</li>
+                    <li>North Carolina Repair</li>
+                    <li>North Dakota Repair</li>
+                    <li>Ohio Repair</li>
+                </ul>
+                <ul class="li-block6">
+                    <li>Oklahorna Repair</li>
+                    <li>Oregon Repair</li>
+                    <li>Pennsylvania Repair</li>
+                    <li>Rhode Island Repair</li>
+                    <li>South Carolina Repair</li>
+                    <li>South Dakota Repair</li>
+                    <li>Tennessee Repair</li>
+                </ul>
+            </div>
+            <img src="../assets/repair-cars/background_infoTable.jpg" alt="">
+        </div> <!-- final image-repair -->
+    </article>
+    <section id="models-car">
+        <div class="images-models">
+            <img src="../assets/model-cars/car-logo-1.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-2.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-3.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-4.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-5.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-6.jpg" alt="">
+            <img src="../assets/model-cars/car-logo-7.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="galery">
+        <div class="overlay-galery">
+            <span class="icon-galery-content"><i class="fas fa-window-minimize"></i></span>
+            <h3>OUR GALLERY</h3>
+            <span class="icon-galery-content"><i class="fas fa-window-minimize"></i></span>
+        </div> <!-- final div overlay -->
+        <div class="gallery-images">
+            <img src="../assets/gallery/pic_1.jpg" alt="">
+            <img src="../assets/gallery/pic_2.jpg" alt="">
+            <img src="../assets/gallery/pic_3.jpg" alt="">
+            <img src="../assets/gallery/pic_4.jpg" alt="">
+            <img src="../assets/gallery/pic_5.jpg" alt="">
+            <img src="../assets/gallery/pic_6.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="content-about">
+            <div class="h1-about-us">
+                <h3 class="h30">CONTACT US</h3>
+                <div class="icon-about">
+                    <span class="spanA"><i class="fas fa-window-minimize"></i></span>
+                </div>
+                <p>ADDRESS</p>
+                <h3 class="h31">386 ENGINE AVENUE WINDSHIELD, CA 87301</h3>
+                <p>PHONE</p>
+                <h3 class="h32">909.450.2735</h3>
+                <p>EMAIL</p>
+                <h3 class="h33">INFO@ROTAAUTOSERVICE.COM</h3>
+            </div> <!-- final div h1-about-us -->
+            <div class="h1-about-us2">
+                <h3 class="h30">QUICK LINKS</h3>
+                <div class="icon-about">
+                    <span class="spanA"><i class="fas fa-window-minimize"></i></span>
+                </div>
+                <ul>
+                    <li>Preventive maintenance</li>
+                    <li>Oil change</li>
+                    <li>Brakes & Brake repair</li>
+                    <li>Tires & Tire repair</li>
+                    <li>Mufflers & Exhaust</li>
+                    <li>Steering & Suspension</li>
+                </ul>
+            </div> <!-- final div h1-about-us2 -->
+            <div class="h1-about-us3">
+                <h3 class="h30">OUR COMPANY</h3>
+                <div class="icon-about">
+                    <span class="spanA"><i class="fas fa-window-minimize"></i></span>
+                </div>
+                <ul>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Terms & conditions</li>
+                    <li>Privacy policy</li>
+                    <li>Opening ours</li>
+                    <li>Recommendations</li>
+                </ul>
+            </div> <!-- final div h1-about-us3 -->
+            <div class="h1-about-us4">
+                <h3 class="h30">LATEST BLOG POSTS</h3>
+                <div class="icon-about">
+                    <span class="spanA"><i class="fas fa-window-minimize"></i></span>
+                </div>
+                <p>February 15, 2015</p>
+                <h3 class="h41">SPRING IS RIGHT AROUND THE CORNER: HOW TO GET YOUR VEHICLE READY FOR WARMER WEATHER</h3>
+                <p>February 21,2015</p>
+                <h3 class="h42">CAR HACKS TO INSTANTLY IMPROVE EVERY DRIVE</h3>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="content-footer">
+            <div class="paragrafh">
+                <p>© 2015 All rights reserved. Design by CreateIT</p>
+            </div>
+            <div class="icons-footer">
+                <span class="icon1"><i class="fab fa-facebook"></i></span>
+                <span class="icon2"><i class="fab fa-twitter"></i></span>
+                <span class="icon3"><i class="fab fa-youtube"></i></span>
+                <span class="icon4"><i class="fab fa-discord"></i></span>
+                <span class="icon5"><i class="fab fa-google"></i></span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

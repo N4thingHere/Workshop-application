@@ -1,0 +1,1029 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMEÇO DA ESTILIZAÇÃO DA NAVBAR */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: static;
+    top: 0;
+  }
+  
+  .informations {
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-left: 50px;
+  }
+  
+  .checkout {
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 70px;
+    margin-right: 50px;
+  }
+
+  .buttons {
+    cursor: pointer;
+    position: relative;
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .buttons:hover {
+    color: red;
+  }
+  
+  .buttons::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .buttons:hover::after {
+    background: red;
+    transform: scaleX(1);
+  }
+
+/* FINAL ESTILIZAÇÃO DA NAVBAR */
+
+
+
+  /* COMEÇO ESTILIZAÇÃO DO MAIN */
+
+  #main {
+    position: relative;
+    overflow: hidden;
+    /* margin-top: 60px; */
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    position: relative;
+    flex: 0 0 100%;
+    text-align: left;
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+  }
+  
+  .slide h1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 350px;
+    word-wrap: break-word;
+    font-size: 50px;
+  }
+
+  .buttons-img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttons-img button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .buttons-img span {
+    margin: 0 5px;
+    color: #fff;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between; /* Adicionado */
+    z-index: 1;
+  }
+  
+  
+  .controls button {
+    color: white;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 40px;
+  }
+  
+  .controls button:hover {
+    color: red;
+  }
+  
+.buttons-img {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top: 10px;
+}
+
+.buttons-img button {
+  font-size: 14px;
+  font-weight: bold;
+  width: 100;
+  height: 50px;
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons-img .red-button {
+    background-color: darkred;
+}
+
+.buttons-img button:hover {
+    color: darkred;
+}
+
+.buttons-img .red-button:hover {
+    background-color: white;
+}
+
+.buttons-img span {
+  margin: 0 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.buttons-img .transparent-button {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.buttons-img .transparent-button:hover{
+    color: red;
+}
+
+/* FINAL ESTILIZAÇÃO DO MAIN */
+
+/* COMEÇO DA ESTILIZAÇÃO DO NAVBAR DO MAIN */
+
+#navbar-main {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar-main .divider {
+    width: 1px;
+    height: 100%;
+    background-color: rgb(87, 87, 87);
+}
+
+#navbar-main .icon {
+    color: darkred;
+    font-size: 30px;
+    position: relative;
+    top: -2px;
+}
+
+#navbar-main h3 {
+    color: white;
+    width: 200px;
+    word-wrap: break-word;
+    padding-left: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#navbar-main h3:hover{
+    color: darkred;
+}
+
+/* FINAL DA ESTILIZAÇÃO DO NAVBAR DO MAIN */
+
+/* COMEÇO DA ESTILIZAÇÃO DO CONTEÚDO DA PAGINA */
+
+#article {
+    width: 100%;
+    height: 1100px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 80px;
+
+}
+
+#content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+#content .block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  #content .block img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #content .block-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 0;
+    padding: 10px;
+    color: white;
+  }
+  
+  #content .block-content h4 {
+    margin: 0;
+    font-size: 26px;
+  }
+  
+  #content .block-content .icon-block {
+    display: block;
+    margin-top: 2px;
+    font-size: 24px;
+    transform: scale(1.5, 0.5); 
+    margin-left: 8px;
+    opacity: 0.3;
+}
+
+#content .block:hover .icon-block {
+  opacity: 1; /* Define a opacidade para 1 (sem opacidade) ao passar o mouse por cima do bloco */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para a propriedade opacity */
+}
+
+
+
+.block {
+  position: relative;
+  overflow: hidden; /* Para garantir que o pseudo-elemento ::before fique contido dentro do bloco */
+}
+
+
+.block:hover {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(194, 0, 0); /* Vermelho com 50% de opacidade */
+}
+
+.block:hover img {
+  opacity: 0.2; /* Opacidade da imagem ao passar o mouse */
+  transition: opacity 0.4s ease; /* Transição suave da opacidade */
+}
+
+  
+.block1 {
+  position: relative;
+  /* ... outros estilos ... */
+}
+
+.block1:hover::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+  content: "\f0ad"; /* Código do ícone wrench */
+}
+
+.block2 {
+  position: relative;
+  /* ... outros estilos ... */
+}
+
+
+.block2:hover::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+  content: "\f0ad"; /* Código do ícone wrench */
+}
+
+.block3 {
+  position: relative;
+}
+
+
+.block3:hover::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+  content: "\f0ad"; /* Código do ícone wrench */
+
+}
+
+.block4:hover::before {
+  content: "\f0ad"; /* Código do ícone wrench */
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+}
+
+.block5:hover::before{
+  content: "\f0ad"; /* Código do ícone wrench */
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+}
+
+.block6:hover::before{
+  content: "\f0ad"; /* Código do ícone wrench */
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+}
+  
+  
+  .block7{
+    width: 284px;
+    height: 260px;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block7 .button-block7{
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    transition: border 0.3s ease;
+}
+
+.block7 .button-block7:hover{
+  color: darkred;
+  border-color:darkred ;
+}
+
+.hr-article{
+  margin-top: 80px;
+  color: rgb(167, 167, 167);
+  opacity: 0.3;
+  margin-left: 104px;
+  margin-right: 104px;
+}
+
+div.text-block{
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titles{
+  width: 100%;
+  margin-left: 105px;
+  margin-right: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titles .h2-text-block {
+  font-size: 30px;
+  width: 500px;
+  word-wrap: break-word;
+}
+
+.titles .h4-text-block {
+  font-size: 20px;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.titles .h4-text-block-2 {
+  font-size: 20px;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.text-block .text-block-span {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 113px;
+  font-size: 24px;
+  transform: scale(1.5, 0.5); 
+}
+
+.subtitles {
+  width: 100%;
+  margin-left: 105px;
+  margin-right: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.subtitles .h2-subtitle{
+  width: 500px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.subtitles .h4-subtitle{
+  font-size: 18px;
+  width: 200px;
+  word-wrap: break-word
+}
+
+.subtitles .h4-subtitle-2{
+  font-size: 18px;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.button-text-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.text-block-button{
+  font-size: 17px;
+  width: 300px;
+  height: 50px;
+  background-color: transparent;
+  border: 3px solid darkred;
+  color: darkred;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.text-block-button:hover{
+  color: rgb(70, 69, 69);
+  border-color: rgb(70, 69, 69);
+}
+
+/* FINAL ESTILIZAÇÃO ARTICLE MAINTENANCE */
+
+/* COMEÇO ESTILIZAÇÃO COUPONS */
+
+#container-coupons{
+  width: 100%;
+  height: 1000px;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+}
+
+.titles-coupons {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0px;
+}
+
+.titles-coupons .coupons-h1{
+  margin-top: 200px;
+}
+
+.titles-coupons .coupons-subtitle{
+  width: 700px;
+  font-size: 20px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.blocks-coupons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.block-coupons1 {
+  margin-top: 40px;
+  width: 370px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.5); /* Adicione esta linha para o efeito de sombra */
+}
+
+.block-coupons2 {
+  margin-top: 40px;
+  width: 370px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.5); /* Adicione esta linha para o efeito de sombra */
+}
+
+.block-coupons3 {
+  margin-top: 40px;
+  width: 370px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.5); /* Adicione esta linha para o efeito de sombra */
+}
+
+.block-coupons1-title{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.block-coupons1-title h3{
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.block-coupons1-icon{
+  display: flex;
+  justify-content: center;
+}
+
+.block-coupons1-icon .icon-coupons1{
+  color: rgb(0, 0, 0), 3, 3;
+  opacity: 0.4;
+  font-size: 24px;
+  transform: scale(1.5, 0.5); 
+}
+
+.offerts{
+  margin-top: 30px;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offerts-subtitle{
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hr-offerts{
+  margin-top: 20px;
+  opacity: 0.2;
+}
+
+.description-offerts {
+  color: rgb(0, 0, 0);
+  width: 300px;
+  word-wrap: break-word;
+  font-size: 16px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.button-offerts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.button-offerts button{
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  background-color: blue;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.button-offerts button:hover{
+  background-color: rgb(90, 90, 90);
+}
+
+.block-button{
+  width: 40px;
+  height: 40.7px;
+  background-color: red;
+}
+
+.hr-offerts-button{
+  margin-top: 40px;
+  opacity: 0.2;
+}
+
+.expires{
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.expires p{
+  font-size: 14px;
+}
+
+.button-view-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.button-view-all button{
+  width: 190px;
+  height: 50px;
+  font-weight: bold;
+  background-color: transparent;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.button-view-all button:hover{
+  border-color: red;
+  color: red;
+}
+
+/* FINAL ESTILIZAÇÃO ARTICLE MAINTENANCE COUPONS */
+
+/* COMEÇO ESTILIZAÇÃO LOCALIZAÇÃO REPARAÇÃO */
+
+.image-repair {
+    max-width: 100%;
+    position: relative;
+}
+
+.image-repair img {
+  width: 1340px;
+  height: 500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 20px; /* Ajuste a distância vertical a partir do topo */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fffdfd; /* Define a cor do texto */
+    padding: 10px; /* Adiciona um espaço interno à sobreposição */
+    box-sizing: border-box; /* Garante que o espaço interno seja considerado no cálculo total do tamanho da sobreposição */
+    gap: 20px;
+}
+
+.overlay span,
+.overlay h2 {
+    margin-top: 35px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.overlay span{
+  opacity: 0.2;
+}
+
+.icon-repair-content {
+    font-size: 24px;
+    transform: scale(17, 0.4);
+    display: flex;
+    align-items: center;
+}
+
+.ul-repair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+
+}
+
+.ul-repair ul {
+  width: 200px;
+  height: 230px;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  color: rgb(17, 16, 16);
+  /* Estilos adicionais para personalizar a aparência */
+  cursor: pointer;
+}
+
+.ul-repair li {
+  margin-bottom: 20px;
+  list-style: none;
+  color: rgb(173, 172, 172);
+  transition: color 0.3s ease;
+}
+
+.ul-repair li:hover{
+  color: darkred;
+}
+
+/* FINAL ESTILIZAÇÃO LOCAIS REPARAÇÃO */
+
+/* outros */
+#models-car{
+  width: 100%;
+  height: 120px;
+}
+
+.images-models{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+#galery{
+  width: 100%;
+  height: 350px;
+  border-top: 2px solid rgb(179, 176, 176, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay-galery {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 30px; /* Ajuste o valor negativo conforme necessário */
+}
+
+.overlay-galery span,
+.overlay-galery h3 {
+    margin-right: 110px;
+    margin-left: 110px;
+}
+
+.icon-galery-content {
+  opacity: 0.2;
+  font-size: 24px;
+  transform: scale(17, 0.4);
+}
+
+.gallery-images{
+  margin-top: 40px;
+  display: flex;
+  gap: 0 25px;
+  cursor: pointer;
+}
+
+#about-us{
+  width: 100%;
+  height: 420px;
+  border-top: 2px solid rgb(145, 145, 145, 0.2);
+  background-color: rgb(243, 243, 243);
+}
+
+.content-about{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* primeiro bloco */
+
+.h1-about-us p{
+  margin-top: 22px;
+  font-size: 11px;
+}
+
+.h1-about-us .h31, .h1-about-us .h32, .h1-about-us .h33{
+  margin-top: 10px;
+}
+
+
+.h1-about-us .h30{
+  width: 200px;
+  font-size: 21px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.h1-about-us .h31{
+  width: 250px;
+  font-size: 19px;
+  word-wrap: break-word;
+}
+
+.h1-about-us2 .h30, .h1-about-us3 .h30, .h1-about-us4 .h30{
+  font-size: 21px;
+}
+
+.h1-about-us2 li, .h1-about-us3 li{
+  list-style: none;
+}
+
+.h1-about-us4 h3{
+  width: 300px;
+  word-wrap: break-word;
+}
+
+/* fim primeiro bloco */
+
+/* segundo bloco */
+
+.h1-about-us2 ul{
+  margin-top: 20px;
+}
+
+.h1-about-us2 li{
+  margin-top: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.h1-about-us2 li:hover{
+  color: darkred;
+}
+
+/* fim segundo bloco */
+
+/* começo terceiro bloco */
+
+.h1-about-us3 ul{
+  margin-top: 20px;
+}
+
+.h1-about-us3 li {
+  margin-top: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.h1-about-us3 li:hover{
+  color: darkred;
+}
+
+/* fim terceiro bloco */
+
+/* começo quarto bloco */
+
+.h1-about-us4 p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.h1-about-us4 .h41, .h1-about-us4 .h42 {
+  margin-top: 10px;
+  font-size: 20.76px;
+}
+
+/* fim quarto bloco */
+
+/* icone blocos */
+
+.icon-about {
+  font-size: 20px;
+  opacity: 0.2;
+}
+
+/* fim icone blocos */
+
+/* fim outros */
+
+
+/* footer */
+
+#footer {
+  width: 100%;
+  height: 70px;
+  border-top: 2px solid rgb(145, 145, 145, 0.2);
+}
+
+.content-footer{
+  margin-top: 25px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons-footer{
+  margin-right: 80px;
+  display: flex;
+  gap: 30px;
+  font-size: 19px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.icons-footer .icon1:hover{
+  color: darkred;
+}
+
+.icons-footer .icon2:hover{
+  color: darkred;
+}
+
+.icons-footer .icon3:hover{
+  color: darkred;
+}
+
+.icons-footer .icon4:hover{
+  color: darkred;
+}
+
+.icons-footer .icon5:hover{
+  color: darkred;
+}
