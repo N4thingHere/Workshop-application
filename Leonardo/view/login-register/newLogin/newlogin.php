@@ -1,72 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title> Login Form  </title>
+  <title> Login Form | Nothing4us </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="./styleNewLogin.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./styleNewLogin.css">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<!-- Mixins-->
-<!-- Pen Title-->
-<div class="pen-title">
-  
-</div>
-<div class="rerun"><a href="">Reload</a></div>
-<div class="container">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Login</h1>
-    <form method="post" action="../enter.php">
-      <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required" name="user"/>
-        <label for="#{label}">Username</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required" name="password"/>
-        <label for="#{label}">Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <input type="submit" value="Go" class="input-submit-login">
-      </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
-    </form>
-  </div>
-  <div class="card alt">
-    <div class="toggle"></div>
-    <h1 class="title">Register
-      <div class="close"></div>
-    </h1>
-    <form>
-      <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Username</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Repeat Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button><span>Next</span></button>
-      </div>
-    </form>
-  </div>
-</div>
 
-<!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./configNewL.js"></script>
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- Mixins-->
+  <!-- Pen Title-->
+  <div class="pen-title">
+
+  </div>
+  <div class="rerun"><a href="">Reload</a></div>
+  <div class="container">
+    <div class="card"></div>
+    <div class="card">
+      <h1 class="title">Login</h1>
+      <form method="post" action="../enter.php">
+        <div class="input-container">
+          <input type="#{type}" id="#{label}" required="required" name="user"/>
+          <label for="#{label}">Username</label>
+          <div class="bar"></div>
+        </div>
+        <div class="input-container">
+          <input type="#{type}" id="#{label}" required="required" name="password" />
+          <label for="#{label}">Password</label>
+          <div class="bar"></div>
+        </div>
+        <div class="button-container">
+          <button type="submit"><span>Go</span></button>
+        </div>
+        <div class="footer"><a href="#">Forgot your password?</a></div>
+      </form>
+    </div>
+    <div class="card alt">
+      <div class="toggle"></div>
+      <h1 class="title">Register
+        <div class="close"></div>
+      </h1>
+      <form method="post" action="../register.php">
+        <div class="input-container">
+          <input type="#{type}" id="#{label}" required="required" name="username"/>
+          <label for="#{label}">Username</label>
+          <div class="bar"></div>
+        </div>
+        <div class="input-container">
+          <input type="#{type}" id="#{label}" required="required" name="password"/>
+          <label for="#{label}">Password</label>
+          <div class="bar"></div>
+        </div>
+        <div class="input-container">
+          <input type="#{type}" id="#{label}" required="required" name="repeat_password"/>
+          <label for="#{label}">Repeat Password</label>
+          <div class="bar"></div>
+        </div>
+        <div class="button-container">
+          <button type="submit"><span>Next</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./configNewL.js"></script>
 
 </body>
+
 </html>
