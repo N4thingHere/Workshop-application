@@ -242,7 +242,7 @@ body {
   margin: 0 60px;
   text-align: center;
 }
-.card .button-container button {
+.card .button-container .input-submit-login {
   outline: 0;
   cursor: pointer;
   position: relative;
@@ -258,13 +258,13 @@ body {
   overflow: hidden;
   transition: 0.3s ease;
 }
-.card .button-container button span {
+.card .button-container .input-submit-login{
   position: relative;
   z-index: 1;
   color: #ddd;
   transition: 0.3s ease;
 }
-.card .button-container button:before {
+.card .button-container input-submit-login:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -278,16 +278,16 @@ body {
   opacity: 0;
   transition: 0.3s ease;
 }
-.card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
+.card .button-container .input-submit-login:hover, .card .button-container .input-submit-login:active, .card .button-container .input-submit-login:focus {
   border-color: #ed2553;
 }
-.card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
+.card .button-container .input-submit-login:hover , .card .button-container .input-submit-login:active , .card .button-container .input-submit-login:focus {
   color: #ed2553;
 }
-.card .button-container button:active span, .card .button-container button:focus span {
+.card .button-container .input-submit-login:active, .card .button-container .input-submit-login:focus{
   color: #ffffff;
 }
-.card .button-container button:active:before, .card .button-container button:focus:before {
+.card .button-container .input-submit-login:active:before, .card .button-container .input-submit-login:focus:before{
   opacity: 1;
   transform: scale(10);
 }

@@ -6,7 +6,7 @@
     class bllUsuario {
    
         public function SelectUser (string $usuario){
-            $dal = new  \Dal\dalUsuario(); 
+            $dal = new  \DAL\dalUsuario(); 
            
             return $dal->SelectUser($usuario);
         }

@@ -20,19 +20,19 @@
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
-    <form>
+    <form method="post" action="../enter.php">
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
+        <input type="#{type}" id="#{label}" required="required" name="user"/>
         <label for="#{label}">Username</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="#{type}" id="#{label}" required="required"/>
+        <input type="#{type}" id="#{label}" required="required" name="password"/>
         <label for="#{label}">Password</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>Go</span></button>
+        <input type="submit" value="Go" class="input-submit-login">
       </div>
       <div class="footer"><a href="#">Forgot your password?</a></div>
     </form>
