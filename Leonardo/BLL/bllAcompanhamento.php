@@ -11,6 +11,12 @@ class bllAcompanhamento {
         return $dal->SelectAcompanhamento();
     }
 
+    public function SelectID (int $id) {
+        $dal = new \DAL\dalAcompanhamento;
+
+        return $dal->SelectID($id);
+    }
+
     public function Insert (\MODEL\Acompanhamento $acompanhamento){
 
        $dal = new \DAL\dalAcompanhamento(); 

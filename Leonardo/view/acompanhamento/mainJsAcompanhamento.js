@@ -10,7 +10,3 @@ navbarToggle.addEventListener('change', function() {
   }
 });
 
-
-function inserirAcompanhamento() {
-  window.location.href = '../Inserir/inserirAcompanhamento.php';
-}

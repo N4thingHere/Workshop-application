@@ -11,6 +11,7 @@ $acomp = $bll->Select();
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +19,9 @@ $acomp = $bll->Select();
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Acompanhamento</title>
 </head>
+
 <body>
-<nav class="navbar">
+    <nav class="navbar">
         <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
         <label for="navbar-toggle" class="navbar-toggle-label">
             <span class="navbar-toggle-icon"></span>
@@ -38,35 +40,43 @@ $acomp = $bll->Select();
     </main>
 
     <section class="section-options">
-            <?php
-                foreach($acomp as $acompanhamentoo) {
-            ?>
-        <span class="bloco1 bloco"><i class="large material-icons">contacts</i></span>
+        <?php
+        foreach ($acomp as $acompanhamentoo) {
+        ?>
+            <span class="bloco1 bloco"><i class="large material-icons">contacts</i></span>
             <h6>ID</h6>
             <span><?php echo $acompanhamentoo->getIdAcompanhamento(); ?></span>
-        <span class="bloco2 bloco"><i class="large material-icons">build</i></span>
+            <span class="bloco2 bloco"><i class="large material-icons">build</i></span>
             <h6>Nome do Produto</h6>
             <span><?php echo $acompanhamentoo->getNomePeca(); ?></span>
-        <span class="bloco3 bloco"><i class="large material-icons">flight</i></span>
+            <span class="bloco3 bloco"><i class="large material-icons">flight</i></span>
             <h6>Status da Entrega</h6>
             <span><?php echo $acompanhamentoo->getStatusPeca(); ?></span>
-        <span class="bloco4 bloco"><i class="large material-icons">local_shipping</i></span>
+            <span class="bloco4 bloco"><i class="large material-icons">local_shipping</i></span>
             <h6>Dia da Chegada</h6>
             <span><?php echo $acompanhamentoo->getDiaChegada(); ?></span>
-        <?php 
-            }
-        ?> 
+            <article class="article">
+                <div class="icones">
+                    <i onclick="editarAcompanhamento()" class="material-icons">add</i>
+                    <i onclick="JavaScript:location.href='../editar/editarAcompanhamento.php?id=' +
+                                    <?php echo $acompanhamentoo->getIdAcompanhamento(); ?>" class="material-icons">compare_arrows</i>
+                    <i class="material-icons">delete</i>
+                </div>
+            </article>
+        <?php
+        }
+        ?>
     </section>
+    <script>
+        function inserirAcompanhamento() {
+            window.location.href = '../Inserir/inserirAcompanhamento.php';
+        }
 
-    <article class="article">
-        <div class="icones">
-            <i onclick="inserirAcompanhamento()" class="material-icons">add</i>
-            <i class="material-icons">compare_arrows</i>
-            <i class="material-icons">delete</i>
-        </div>
-
-    </article>
-
+        function editarAcompanhamento() {
+            window.location.href = '../editar/editarAcompanhamento.php?id=' + '<?php echo $acompanhamentoo->getIdAcompanhamento() ?>';
+        }
+    </script>
     <script src="./mainJsAcompanhamento.js"></script>
 </body>
+
 </html>
