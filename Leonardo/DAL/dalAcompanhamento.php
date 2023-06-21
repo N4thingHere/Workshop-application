@@ -98,7 +98,7 @@ class dalAcompanhamento {
 
     public function Delete(int $idAcompanhamento) {
         try {
-            $sql = "DELETE FROM acompanhamento WHERE id = ?";
+            $sql = "DELETE FROM acompanhamento WHERE idAcompanhamento = ?";
             $pdo = Conexao::conectar(); 
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
             $query = $pdo->prepare($sql);
