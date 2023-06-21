@@ -9,3 +9,8 @@ navbarToggle.addEventListener('change', function() {
     navbarMenu.style.maxHeight = '0';
   }
 });
+
+
+function inserirAcompanhamento() {
+  window.location.href = '../Inserir/inserirAcompanhamento.php';
+}

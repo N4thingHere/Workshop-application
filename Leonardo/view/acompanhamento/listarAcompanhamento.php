@@ -8,15 +8,6 @@ $bll = new \BLL\bllAcompanhamento();
 $acomp = $bll->Select();
 
 ?>
-        <!-- 
-        <tr>
-            <td></td> 
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-        -->
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,7 +59,11 @@ $acomp = $bll->Select();
     </section>
 
     <article class="article">
-    <i class="material-icons">add</i>
+        <div class="icones">
+            <i onclick="inserirAcompanhamento()" class="material-icons">add</i>
+            <i class="material-icons">compare_arrows</i>
+            <i class="material-icons">delete</i>
+        </div>
 
     </article>
 

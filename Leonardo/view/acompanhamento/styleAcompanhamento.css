@@ -129,8 +129,25 @@
     gap: 60px;
     flex-direction: column;
   }
+
   
   .bloco i{
     font-size: 80px; 
     padding: 20px;
+  }
+
+  .article{
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+  }
+
+  .icones {
+    display: flex;
+    gap: 100px;
+    cursor: pointer;
+  }
+  
+  .icones i{
+    font-size: 50px;
   }
