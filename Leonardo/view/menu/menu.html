@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mateuszmalczak/glassmorphism/css/glassmorphism.min.css">
-
+    <title>Menu system</title>
 </head>
+
 <body>
-    <header id="header">
-        <ul class="informations">
-            <li class="buttons">HOME</li>
-            <li class="buttons">ABOUT US</li>
-            <li class="buttons">SERVICES</li>
-            <li class="buttons">APPOINTMENTS</li>
-            <li class="buttons">COUPONS</li>
-            <li class="buttons">FAQ</li>
-            <li class="buttons">CONTACT US</li>
-        </ul>
-        <ul class="checkout">
-            <li class="buttons" onclick="exitF()">LOGOUT</li>
-            <li class="buttons">REGISTER</li>
-        </ul>
-    </header>
+    <nav class="navbar">
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+        <label for="navbar-toggle" class="navbar-toggle-label">
+            <span class="navbar-toggle-icon"></span>
+        </label>
 
+        <ul class="navbar-menu">
+            <li><a href="#">Voltar para o ínicio</a></li>
+            <li><a href="#">Consultaroria</a></li>
+            <li><a href="#">Trocar Usuário</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </nav>
 
-    <a href="../carroEntregue/listarCarroEntregue.php"></a>
-    <a href="../indexaksdk.html"></a>
-    <main id="main-content">
-        <div class="block1 block glassmorphism" onclick="cadastroF()"><h1>Cadastros</h1></div>
-        <div class="block2 block glassmorphism" onclick="processoF()"><h1>Estágio Processo</h1></div>
-        <div class="block3 block glassmorphism" onclick="acompanhamentoF()"><h1>Acompanhamento</h1></div>
-        <div class="block4 block glassmorphism" onclick="esperaF()"><h1>Veículos em Espera</h1></div>
-        <div class="block5 block glassmorphism" onclick="servicoF()"><h1>Veículos em Serviço</h1></div>
-        <div class="block6 block glassmorphism" onclick="prontosF()"><h1>Veículos Prontos</h1></div>
-        <div class="block7 block glassmorphism" onclick="entregueF()"><h1>Veículos Entregues</h1></div>
-        <div class="block8 block glassmorphism" onclick="sairF()"><h1>Sair</h1></div>
+    <main>
+        <div class="message">
+            <h1>Seja Bem-vindo</h1>
+            <h3>Aproveite as oportunidades!</h3>
+        </div>
     </main>
+
+    <section id="section-content">
+        <div class="block1 block">
+            <img src="../menu/newMenu/images/imagem1.jpg" alt="">
+            <h2>Acompanhamento de Peças</h2>
+        </div>
+        <div class="block2 block">
+            <img src="../menu/newMenu/images/imagem2.jpg" alt="">
+            <h2>Cadastros</h2>
+        </div>
+        <div class="block3 block">
+            <img src="../menu/newMenu/images/imagem3.jpg" alt="">
+            <h2>Carros Entregues</h2>
+        </div>
+        <div class="block4 block">
+            <img src="../menu/newMenu/images/imagem4.jpg" alt="">
+            <h2>Carros em Serviço</h2>
+        </div>
+        <div class="block5 block">
+            <img src="../menu/newMenu/images/imagem5.jpg" alt="">
+            <h2>Carros Prontos para Entrega</h2>
+        </div>
+        <div class="block6 block">
+            <img src="../menu/newMenu/images/imagem6.jpg" alt="">
+            <h2>Carros Aguardando Manutenção</h2>
+        </div>
+        <div class="block7 block">
+            <img src="../menu/newMenu/images/imagem7.jpg" alt="">
+            <h2>Processos</h2>
+        </div>
+    </section>
     <script src="./configs.js"></script>
 </body>
+
 </html>

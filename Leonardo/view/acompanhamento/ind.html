@@ -1,27 +1,3 @@
-<?php
-
-include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllAcompanhamento.php';
-
-use BLL\bllAcompanhamento;
-
-$bll = new \BLL\bllAcompanhamento();
-$acomp = $bll->Select();
-
-?>
-        <!-- <?php
-        foreach($acomp as $acompanhamentoo) {
-            ?>
-        <tr>
-            <td><?php echo $acompanhamentoo->getIdAcompanhamento(); ?></td> 
-            <td><?php echo $acompanhamentoo->getNomePeca(); ?></td>
-            <td><?php echo $acompanhamentoo->getStatusPeca(); ?></td>
-            <td><?php echo $acompanhamentoo->getDiaChegada(); ?></td>
-            </tr>
-        <?php 
-            }
-        ?> -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
