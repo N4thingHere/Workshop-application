@@ -8,18 +8,14 @@ $bll = new \BLL\bllAcompanhamento();
 $acomp = $bll->Select();
 
 ?>
-        <!-- <?php
-        foreach($acomp as $acompanhamentoo) {
-            ?>
+        <!-- 
         <tr>
-            <td><?php echo $acompanhamentoo->getIdAcompanhamento(); ?></td> 
-            <td><?php echo $acompanhamentoo->getNomePeca(); ?></td>
-            <td><?php echo $acompanhamentoo->getStatusPeca(); ?></td>
-            <td><?php echo $acompanhamentoo->getDiaChegada(); ?></td>
+            <td></td> 
+            <td></td>
+            <td></td>
+            <td></td>
             </tr>
-        <?php 
-            }
-        ?> -->
+        -->
 
 
 <!DOCTYPE html>
@@ -27,7 +23,7 @@ $acomp = $bll->Select();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styleAcompanhamento.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Acompanhamento</title>
 </head>
@@ -51,15 +47,30 @@ $acomp = $bll->Select();
     </main>
 
     <section class="section-options">
+            <?php
+                foreach($acomp as $acompanhamentoo) {
+            ?>
         <span class="bloco1 bloco"><i class="large material-icons">contacts</i></span>
-
+            <h6>ID</h6>
+            <span><?php echo $acompanhamentoo->getIdAcompanhamento(); ?></span>
         <span class="bloco2 bloco"><i class="large material-icons">build</i></span>
-
+            <h6>Nome do Produto</h6>
+            <span><?php echo $acompanhamentoo->getNomePeca(); ?></span>
         <span class="bloco3 bloco"><i class="large material-icons">flight</i></span>
-
+            <h6>Status da Entrega</h6>
+            <span><?php echo $acompanhamentoo->getStatusPeca(); ?></span>
         <span class="bloco4 bloco"><i class="large material-icons">local_shipping</i></span>
-
+            <h6>Dia da Chegada</h6>
+            <span><?php echo $acompanhamentoo->getDiaChegada(); ?></span>
+        <?php 
+            }
+        ?> 
     </section>
+
+    <article class="article">
+    <i class="material-icons">add</i>
+
+    </article>
 
     <script src="./mainJsAcompanhamento.js"></script>
 </body>
