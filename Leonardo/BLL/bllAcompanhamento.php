@@ -25,10 +25,10 @@ class bllAcompanhamento {
       
     }
 
-    public function Update(\MODEL\Acompanhamento $acompanhamento) {
+    public function UpdateBanco (\MODEL\Acompanhamento $acompanhamento) {
         $dal = new \DAL\dalAcompanhamento();
 
-        $dal->Update($acompanhamento);
+        $dal->UpdateAcomp($acompanhamento);
     }
 
     public function Delete(int $id) {

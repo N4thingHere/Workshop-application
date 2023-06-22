@@ -74,25 +74,20 @@ class dalAcompanhamento {
     }
     
 
-    public function Update(\MODEL\Acompanhamento $acompanhamento) {
-        try {
-            $sql = "UPDATE acompanhamento SET nome_peça=?, status_peça=?, dia_chegada=? WHERE idAcompanhamento=?";
+    public function UpdateAcomp(\MODEL\Acompanhamento $acompanhamento){
+        $sql = "UPDATE acompanhamento SET nome_peça=?, status_peça=?, dia_chegada=? WHERE idAcompanhamento=?";
     
-            $pdo = Conexao::conectar(); 
-            $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
-            $query = $pdo->prepare($sql);
-            $result = $query->execute([
-                $acompanhamento->getNomePeca(),
-                $acompanhamento->getStatusPeca(),
-                $acompanhamento->getDiaChegada(),
-                $acompanhamento->getIdAcompanhamento()
-            ]);
-            Conexao::desconectar();
-            return $result;
-        } catch (\PDOException $e) {
-            echo "Erro na atualização: " . $e->getMessage();
-            return false;
-        }
+        $con = Conexao::conectar(); 
+        $con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
+        $query = $con->prepare($sql);
+        $result = $query->execute([
+            $acompanhamento->getNomePeca(),
+            $acompanhamento->getStatusPeca(), 
+            $acompanhamento->getDiaChegada(),
+            $acompanhamento->getIdAcompanhamento()
+        ]);
+        Conexao::desconectar();
+        return $result; 
     }
     
 

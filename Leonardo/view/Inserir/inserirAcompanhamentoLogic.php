@@ -10,5 +10,5 @@
 
    $bll = new \BLL\bllAcompanhamento(); 
    $bll->Insert($acompanhamento); 
-     
+   echo "<script>window.location.href = '../acompanhamento/listarAcompanhamento.php';</script>";
 ?>

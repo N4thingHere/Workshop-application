@@ -1,13 +1,15 @@
-<?php 
-    include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllAcompanhamento.php';
-    $id = $_GET['id'];
-    $bll = new \BLL\bllAcompanhamento();
-    $acompanhamento = $bll->SelectID($id);
+<?php
+include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllAcompanhamento.php';
+$id = $_GET['id'];
+$bll = new \BLL\bllAcompanhamento();
+$acompanhamento = $bll->SelectID($id);
 
+echo $acompanhamento->getNomePeca();
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
     body {
@@ -57,26 +59,30 @@
     }
   </style>
 </head>
+
 <body>
   <div class="form-container">
     <h2>Formulário</h2>
-    <form id="myForm" method="post" action="../Inserir/inserirAcompanhamentoLogic.php">
+    <form id="myForm" method="POST" action="../editar/editarAcompLogic.php">
       <div class="form-group">
-        <label for="name">Nome da Peça: <?php echo $acompanhamento->getIdAcompanhamento(); ?></label>
-        <input type="text" id="name" name="name" placeholder="Parafuso..." required >
+        <label for="idgroup">ID: <?php echo $acompanhamento->getIdAcompanhamento(); ?></label>
+        <input type="text" name="idgroup" required placeholder="<?php echo $id ?>">
+        <label for="name">Nome da Peça: </label>
+        <input type="text" id="name" name="name_peca" required placeholder="<?php echo $acompanhamento->getNomePeca(); ?>">
       </div>
       <div class="form-group">
         <label for="email">Status da Peça:</label>
-        <input type="text" id="email" name="peca" placeholder="A caminho..." required>
+        <input type="text" id="email" name="status_peca" required placeholder="<?php echo $acompanhamento->getStatusPeca(); ?>">
       </div>
       <div class="form-group">
         <label for="dia-chegada">Dia da Chegada:</label>
-        <input type="text" name="dia-chegada" id="dia-chegada" placeholder="99/99/9999">
-    </div>
+        <input type="text" name="dia-chegada" id="dia-chegada" placeholder="<?php echo $acompanhamento->getDiaChegada(); ?>">
+      </div>
       <div class="form-group">
         <input type="submit" value="Enviar">
       </div>
     </form>
   </div>
 </body>
+
 </html>

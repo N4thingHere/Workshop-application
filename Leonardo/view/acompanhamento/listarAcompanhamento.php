@@ -1,12 +1,8 @@
 <?php
-
 include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllAcompanhamento.php';
-
 use BLL\bllAcompanhamento;
-
 $bll = new \BLL\bllAcompanhamento();
 $acomp = $bll->Select();
-
 ?>
 
 <!DOCTYPE html>
@@ -57,10 +53,10 @@ $acomp = $bll->Select();
             <span><?php echo $acompanhamentoo->getDiaChegada(); ?></span>
             <article class="article">
                 <div class="icones">
-                    <i onclick="editarAcompanhamento()" class="material-icons">add</i>
+                    <i onclick="inserirAcompanhamento()" class="material-icons">add</i>
                     <i onclick="JavaScript:location.href='../editar/editarAcompanhamento.php?id=' +
                                     <?php echo $acompanhamentoo->getIdAcompanhamento(); ?>" class="material-icons">compare_arrows</i>
-                    <i class="material-icons">delete</i>
+                    <i onclick="JavaScript: removerAcompanhamento(<?php echo $acompanhamentoo->getIdAcompanhamento(); ?>)" class="material-icons">delete</i>
                 </div>
             </article>
         <?php
@@ -72,11 +68,12 @@ $acomp = $bll->Select();
             window.location.href = '../Inserir/inserirAcompanhamento.php';
         }
 
-        function editarAcompanhamento() {
-            window.location.href = '../editar/editarAcompanhamento.php?id=' + '<?php echo $acompanhamentoo->getIdAcompanhamento() ?>';
+        function removerAcompanhamento(id) {
+            if(confirm('Excluir o Acompanhamento ' + id + '?')) {
+                window.location.href = '../detalhes/detalhesAcompanhamento.php?id=' + id;
+            }
         }
     </script>
     <script src="./mainJsAcompanhamento.js"></script>
 </body>
-
 </html>
