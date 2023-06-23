@@ -19,7 +19,7 @@
             <li><a href="#">Voltar para o ínicio</a></li>
             <li><a href="#">Consultaroria</a></li>
             <li><a href="#">Trocar Usuário</a></li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../login-register/newLogin/logout.php">Sair</a></li>
         </ul>
     </nav>
 
@@ -32,21 +32,41 @@
 
     <section id="section-content">
         <div class="block1 block">
-            <img src="../menu/newMenu/images/imagem1.jpg" alt="">
+            <img src="../menu/newMenu/images/imagem1.jpg" alt="" onclick="ir()">
             <h2>Acompanhamento de Peças</h2>
         </div>
+        <script>
+            function ir() {
+                window.location.href = '../acompanhamento/listarAcompanhamento.php';
+            }
+        </script>
         <div class="block2 block">
-            <img src="../menu/newMenu/images/imagem2.jpg" alt="">
+            <img src="../menu/newMenu/images/imagem2.jpg" alt="" onclick="ir2()">
             <h2>Cadastros</h2>
         </div>
+        <script>
+            function ir2() {
+                window.location.href = '../cadastro/listarCadastros.php';
+            }
+        </script>
         <div class="block3 block">
-            <img src="../menu/newMenu/images/imagem3.jpg" alt="">
+            <img src="../menu/newMenu/images/imagem3.jpg" alt="" onclick="ir3()">
             <h2>Carros Entregues</h2>
         </div>
+        <script>
+            function ir3() {
+                window.location.href = '../carroEntregue/listarCarroEntregue.php';
+            }
+        </script>
         <div class="block4 block">
-            <img src="../menu/newMenu/images/imagem4.jpg" alt="">
+            <img src="../menu/newMenu/images/imagem4.jpg" alt="" onclick="ir4()">
             <h2>Carros em Serviço</h2>
         </div>
+        <script>
+            function ir4() {
+                window.location.href = '../carroServico/listarCarroServico.php';
+            }
+        </script>
         <div class="block5 block">
             <img src="../menu/newMenu/images/imagem5.jpg" alt="">
             <h2>Carros Prontos para Entrega</h2>

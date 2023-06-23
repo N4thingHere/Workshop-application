@@ -22,60 +22,73 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     </head>
-    
-    <body>
-    <header id="header">
-        <ul class="informations">
-            <li class="buttons">HOME</li>
-            <li class="buttons">ABOUT US</li>
-            <li class="buttons">SERVICES</li>
-            <li class="buttons">APPOINTMENTS</li>
-            <li class="buttons">COUPONS</li>
-            <li class="buttons">FAQ</li>
-            <li class="buttons">CONTACT US</li>
-        </ul>
-        <ul class="checkout">
-            <li class="buttons" onclick="pageLogin()">LOGIN</li>
-            <li class="buttons">REGISTER</li>
-            <script src="../settingsPage.js"></script>
-        </ul>
-    </header>
+<body>
+<nav class="navbar">
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+        <label for="navbar-toggle" class="navbar-toggle-label">
+            <span class="navbar-toggle-icon"></span>
+        </label>
 
-        <div class="container black-text">
-            <div class="center">
-                <h1>Carros em Serviço</h1>
-            </div>
-            <table class="centered">
-        <thead>
-          <tr>
-              <th>ID</th>
-              <th>Placa do Carro</th>
-              <th>Final da Placa do Carro</th>
-              <th>Nome do Proprietario</th>
-          </tr>
-        </thead>
+        <ul class="navbar-menu">
+            <li><a href="#">Voltar para o ínicio</a></li>
+            <li><a href="#">Consultaroria</a></li>
+            <li><a href="#">Trocar Usuário</a></li>
+            <li><a href="../login-register/newLogin/logout.php">Sair</a></li>
+        </ul>
+    </nav>
 
-        <tbody>
-            <?php
+    <main class="main">
+        <h1>Carros em Serviço</h1>
+    </main>  
+    <section class="section-options">
+        <?php
                 foreach($servc as $s) {
-                    ?>
-                    <tr>
-                <td><?php echo $s->getIdCarroServico(); ?></td>
-    
-                <td><?php echo $s->getPlacaCarroServico(); ?></td>
-    
-                <td><?php echo $s->getFinalPlacaCarroServico(); ?></td>
-    
-                <td><?php echo $s->getNomeProprietarioCarroServico(); ?></td>
-                </tr>
-            <?php 
-                }
-            ?>
-            </tbody>
-      </table>  
+        ?>
+                <span class="bloco1 bloco"><i class="large material-icons">assignment_ind</i></span>
+                <h6>ID:</h6>
+                <span><?php echo $s->getIdCarroServico(); ?></span>
+                <span class="bloco2 bloco"><i class="large material-icons">assignment</i></span>
+                <h6>Placa do Carro:</h6>
+                <span><?php echo $s->getPlacaCarroServico(); ?></span>
+                <span class="bloco3 bloco"><i class="large material-icons">assistant</i></span>
+                <h6>Final da Placa do Carro:</h6>
+                <span><?php echo $s->getFinalPlacaCarroServico(); ?></span>
+                <span class="bloco4 bloco"><i class="large material-icons">face</i></span>
+                <h6>Nome do Proprietario do Carro:</h6>
+                <span><?php echo $s->getNomeProprietarioCarroServico(); ?></span>
+                <article class="article">
+                    <div class="icones">
+                    <i onclick="inserirCarro()"  class="large material-icons">add</i>
+                    <i  onclick="JavaScript:location.href='../editar/editarCarroServico.php?id=' +
+                                    <?php echo $s->getIdCarroServico(); ?>" class="large material-icons">compare_arrows</i>
+                    <i  onclick="JavaScript: removerCarro(<?php echo $s->getIdCarroServico(); ?>)" class="large material-icons">delete</i>
+                    </div>
+                </article>
+        <?php
+            }
+        ?>
+    </section>
+    <script>
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
 
-      <div class="icones">
-      <i class="large material-icons">add</i>
-      <i class="large material-icons">code</i>
-      <i class="large material-icons">clear</i>
-      </div>
+        navbarToggle.addEventListener('change', function() {
+            if (this.checked) {
+                navbarMenu.style.maxHeight = navbarMenu.scrollHeight + 'px';
+            } else {
+                navbarMenu.style.maxHeight = '0';
+            }
+        });
+
+        function inserirCarro() {
+            window.location.href = '../Inserir/inserirCarroServico.php';
+        }
+
+        function removerCarro(id) {
+            if(confirm('Excluir o Carro Entregue ' + id + '?')) {
+                window.location.href = '../detalhes/detalhesCarroServico.php?id=' + id;
+            }
+        }
+    </script>
+</body>
+

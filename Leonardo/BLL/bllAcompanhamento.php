@@ -36,6 +36,5 @@ class bllAcompanhamento {
 
          $dal->Delete($id);
     }
-
 }
 ?>

@@ -12,5 +12,28 @@ class bllCarroServico
        $dal = new \DAL\dalCarroServico;
        return $dal->SelectCarroServico();
    }
+   public function SelectID(int $id) {
+    $dal = new \DAL\dalCarroServico;
+
+    return $dal->SelectID($id);
+   }
+
+   public function Insert (\MODEL\CarroServico $Servico) {
+        $dal = new \DAL\dalCarroServico();
+
+        $dal->Insert($Servico);
+   }
+
+   public function Update(\MODEL\CarroServico $Servico) {
+    $dal = new \DAL\dalCarroServico();
+
+    $dal->Update($Servico);
+   }
+
+   public function Delete(int $id) {
+    $dal = new \DAL\dalCarroServico();
+
+    $dal->Delete($id);
+   }
 }
 ?>

@@ -27,7 +27,7 @@ $acomp = $bll->Select();
             <li><a href="#">Voltar para o ínicio</a></li>
             <li><a href="#">Consultaroria</a></li>
             <li><a href="#">Trocar Usuário</a></li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../login-register/newLogin/logout.php">Sair</a></li>
         </ul>
     </nav>
 

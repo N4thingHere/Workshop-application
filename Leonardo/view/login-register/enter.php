@@ -19,7 +19,7 @@ if ($objUsuario != null) {
 
         session_start();
         $_SESSION['login'] =  $objUsuario->getNomeUsuario() ;
-        echo '<script>window.location.href = "../menu/menu.html";</script>';   
+        echo '<script>window.location.href = "../menu/menu.php";</script>';   
      }
     else {
         echo '<script>window.location.href = "./error404/error404.html";</script>';

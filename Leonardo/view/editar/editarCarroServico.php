@@ -1,8 +1,8 @@
 <?php
-include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllAcompanhamento.php';
+include_once 'C:\XAMPP\htdocs\Workshop-application\Leonardo\BLL\bllCarroServico.php';
 $id = $_GET['id'];
-$bll = new \BLL\bllAcompanhamento();
-$acompanhamento = $bll->SelectID($id);
+$bll = new \BLL\bllCarroServico();
+$servico = $bll->SelectID($id);
 ?>
 
 <!DOCTYPE html>
@@ -61,20 +61,20 @@ $acompanhamento = $bll->SelectID($id);
 <body>
   <div class="form-container">
     <h2>Formulário</h2>
-    <form id="myForm" method="POST" action="../editar/editarAcompLogic.php">
+    <form id="myForm" method="POST" action="../editar/editarCarroSLogic.php">
       <div class="form-group">
-        <label for="idgroup">ID: <?php echo $acompanhamento->getIdAcompanhamento(); ?></label>
-        <input type="text" name="idgroup" required placeholder="<?php echo $id ?>">
-        <label for="name">Nome da Peça: </label>
-        <input type="text" id="name" name="name_peca" required placeholder="<?php echo $acompanhamento->getNomePeca(); ?>">
+        <label for="id">ID: <?php echo $servico->getIdCarroServico(); ?></label>
+        <input type="text" name="id" required placeholder="<?php echo $id ?>">
+        <label for="placa">Placa do veículo: </label>
+        <input type="text" id="name" name="placa" required placeholder="<?php echo $servico->getPlacaCarroServico(); ?>">
       </div>
       <div class="form-group">
-        <label for="email">Status da Peça:</label>
-        <input type="text" id="email" name="status_peca" required placeholder="<?php echo $acompanhamento->getStatusPeca(); ?>">
+        <label for="email">Final da Placa do Veículo:</label>
+        <input type="text" id="email" name="fim" required placeholder="<?php echo $servico->getFinalPlacaCarroServico(); ?>">
       </div>
       <div class="form-group">
-        <label for="dia-chegada">Dia da Chegada:</label>
-        <input type="text" name="dia-chegada" id="dia-chegada" placeholder="<?php echo $acompanhamento->getDiaChegada(); ?>">
+        <label for="dia-chegada">Nome do Proprietario do Veículo:</label>
+        <input type="text" name="nome" id="nome" placeholder="<?php echo $servico->getNomeProprietarioCarroServico(); ?>">
       </div>
       <div class="form-group">
         <input type="submit" value="Enviar">

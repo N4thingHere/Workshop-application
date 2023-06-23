@@ -35,7 +35,7 @@
             <li><a href="#">Voltar para o ínicio</a></li>
             <li><a href="#">Consultaroria</a></li>
             <li><a href="#">Trocar Usuário</a></li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="../login-register/newLogin/logout.php">Sair</a></li>
         </ul>
     </nav>
 
@@ -58,10 +58,10 @@
                 <span><?php echo $cadastros->getSenhaLogin(); ?></span>
                 <article class="article">
                     <div class="icones">
-                    <i class="large material-icons">add</i>
+                    <i onclick="inserirCadastro()"  class="large material-icons">add</i>
                     <i onclick="JavaScript:location.href='../editar/editarCadastro.php?id=' +
                                     <?php echo $cadastros->getIdCadastro(); ?>" class="large material-icons">compare_arrows</i>
-                    <i class="large material-icons">delete</i>
+                    <i onclick="JavaScript: removerCadastro(<?php echo $cadastros->getIdCadastro(); ?>)" class="large material-icons">delete</i>
                     </div>
                 </article>
         <?php
@@ -79,6 +79,17 @@
                 navbarMenu.style.maxHeight = '0';
             }
         });
+
+
+        function inserirCadastro() {
+            window.location.href = '../login-register/newLogin/newlogin.php';
+        }
+
+        function removerCadastro(id) {
+            if(confirm('Excluir o cadastro ' + id + '?')) {
+                window.location.href = '../detalhes/detalhesCadastro.php?id=' + id;
+            }
+        }
     </script>
 </body>
 </html>

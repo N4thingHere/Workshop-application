@@ -32,8 +32,12 @@
         </ul>
         <ul class="checkout">
             <li class="buttons" onclick="pageLogin()">LOGIN</li>
-            <li class="buttons">REGISTER</li>
-            <script src="../settingsPage.js"></script>
+            <li class="buttons" onclick="pageLogin()">REGISTER</li>
+            <script>
+              function pageLogin() {
+                window.location.href = './login-register/newLogin/newlogin.php';
+              }
+            </script>
         </ul>
     </header>
     <main id="main">
